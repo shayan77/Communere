@@ -7,17 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46FAFD670C5969FCECF9F6C0 /* Pods_Communere.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA9DC2DA52D3C1663C1D26CB /* Pods_Communere.framework */; };
 		838DB2AC249B2598008EAA64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB2AB249B2598008EAA64 /* AppDelegate.swift */; };
 		838DB2B5249B2599008EAA64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 838DB2B4249B2599008EAA64 /* Assets.xcassets */; };
 		838DB2C8249B2FBA008EAA64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 838DB2C7249B2FBA008EAA64 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3BCE685B555211127536A804 /* Pods-Communere.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Communere.debug.xcconfig"; path = "Target Support Files/Pods-Communere/Pods-Communere.debug.xcconfig"; sourceTree = "<group>"; };
+		7A3BD4A62C17285448953A4A /* Pods-Communere.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Communere.release.xcconfig"; path = "Target Support Files/Pods-Communere/Pods-Communere.release.xcconfig"; sourceTree = "<group>"; };
 		838DB2A8249B2598008EAA64 /* Communere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Communere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		838DB2AB249B2598008EAA64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		838DB2B4249B2599008EAA64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		838DB2B9249B2599008EAA64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		838DB2C7249B2FBA008EAA64 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BA9DC2DA52D3C1663C1D26CB /* Pods_Communere.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Communere.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -25,17 +29,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46FAFD670C5969FCECF9F6C0 /* Pods_Communere.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		820A3E89552F0C92DC8A6A5A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA9DC2DA52D3C1663C1D26CB /* Pods_Communere.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		838DB29F249B2598008EAA64 = {
 			isa = PBXGroup;
 			children = (
 				838DB2AA249B2598008EAA64 /* Communere */,
 				838DB2A9249B2598008EAA64 /* Products */,
+				EF5A4F7C232A4CE844570B64 /* Pods */,
+				820A3E89552F0C92DC8A6A5A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,6 +137,16 @@
 			path = "UIkit Utilities";
 			sourceTree = "<group>";
 		};
+		EF5A4F7C232A4CE844570B64 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3BCE685B555211127536A804 /* Pods-Communere.debug.xcconfig */,
+				7A3BD4A62C17285448953A4A /* Pods-Communere.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,9 +154,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 838DB2BC249B2599008EAA64 /* Build configuration list for PBXNativeTarget "Communere" */;
 			buildPhases = (
+				A5E5C3FFA0D174E78E6EFF54 /* [CP] Check Pods Manifest.lock */,
 				838DB2A4249B2598008EAA64 /* Sources */,
 				838DB2A5249B2598008EAA64 /* Frameworks */,
 				838DB2A6249B2598008EAA64 /* Resources */,
+				585BE8240A16D1BAE0DAD548 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -186,6 +213,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		585BE8240A16D1BAE0DAD548 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Communere/Pods-Communere-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Communere/Pods-Communere-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Communere/Pods-Communere-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5E5C3FFA0D174E78E6EFF54 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Communere-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		838DB2A4249B2598008EAA64 /* Sources */ = {
@@ -315,6 +384,7 @@
 		};
 		838DB2BD249B2599008EAA64 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BCE685B555211127536A804 /* Pods-Communere.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -333,6 +403,7 @@
 		};
 		838DB2BE249B2599008EAA64 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A3BD4A62C17285448953A4A /* Pods-Communere.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
