@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomTextField" customModule="Communere" customModuleProvider="target">
+            <connections>
+                <outlet property="inputTF" destination="Kpx-wO-GGK" id="Hj2-KV-JA2"/>
+                <outlet property="titleLbl" destination="KMb-nz-KsH" id="0qw-0V-Ffh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="mz8-xL-mpR">
+            <rect key="frame" x="0.0" y="0.0" width="376" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMb-nz-KsH">
+                    <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kpx-wO-GGK">
+                    <rect key="frame" x="0.0" y="29" width="376" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="flf-1a-wqm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Kpx-wO-GGK" firstAttribute="leading" secondItem="jNn-HG-UPR" secondAttribute="leading" id="3Is-KP-IoX"/>
+                <constraint firstItem="KMb-nz-KsH" firstAttribute="leading" secondItem="mz8-xL-mpR" secondAttribute="leading" id="GBN-kb-SZ2"/>
+                <constraint firstItem="Kpx-wO-GGK" firstAttribute="top" secondItem="KMb-nz-KsH" secondAttribute="bottom" constant="8" id="jeA-G4-qHw"/>
+                <constraint firstItem="jNn-HG-UPR" firstAttribute="trailing" secondItem="Kpx-wO-GGK" secondAttribute="trailing" id="k20-3k-jOb"/>
+                <constraint firstItem="KMb-nz-KsH" firstAttribute="top" secondItem="mz8-xL-mpR" secondAttribute="top" id="ziU-XE-gto"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="jNn-HG-UPR"/>
+            <point key="canvasLocation" x="94.20289855072464" y="103.79464285714285"/>
+        </view>
+    </objects>
+</document>

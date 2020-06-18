@@ -29,19 +29,18 @@ class MainCoordinator: NSObject {
         window.makeKeyAndVisible()
         
         if DataManager.shared.isUserLoggedIn {
-            toHomeScene()
+            toLoginScene()
         } else {
             toLoginScene()
         }
     }
     
     func toLoginScene() {
-//        navigationCoordinator.setViewControllers([], animated: false)
-//        let child = RegisterCoordinator(navigationController: navigationCoordinator)
-//        child.parentCoordinator = self
-//        child.registerFinishDelegate = self
-//        childCoordinators?.append(child)
-//        child.start()
+        let child = LoginCoordinator(navigationController: navigationCoordinator)
+        child.parentCoordinator = self
+        child.loginFinishDelegate = self
+        childCoordinators?.append(child)
+        child.start()
     }
     
     func toHomeScene() {
@@ -55,9 +54,9 @@ class MainCoordinator: NSObject {
     }
 }
 
-//extension MainCoordinator: RegisterCoordinatorFinishDelegate {
-//    func onFinish(coordinator: Coordinator) {
-//        navigationCoordinator.setViewControllers([], animated: false)
-//        childCoordinators = childCoordinators?.filter {$0 !== coordinator}
-//    }
-//}
+extension MainCoordinator: LoginCoordinatorFinishDelegate {
+    func onFinish(coordinator: Coordinator) {
+        navigationCoordinator.setViewControllers([], animated: false)
+        childCoordinators = childCoordinators?.filter {$0 !== coordinator}
+    }
+}
