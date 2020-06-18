@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,8 @@
 		838DB2AC249B2598008EAA64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB2AB249B2598008EAA64 /* AppDelegate.swift */; };
 		838DB2B5249B2599008EAA64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 838DB2B4249B2599008EAA64 /* Assets.xcassets */; };
 		838DB2C8249B2FBA008EAA64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 838DB2C7249B2FBA008EAA64 /* LaunchScreen.storyboard */; };
+		838DB2CA249B37B3008EAA64 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB2C9249B37B3008EAA64 /* DataManager.swift */; };
+		838DB2CC249B37C8008EAA64 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB2CB249B37C8008EAA64 /* UserDefault.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		838DB2B4249B2599008EAA64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		838DB2B9249B2599008EAA64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		838DB2C7249B2FBA008EAA64 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		838DB2C9249B37B3008EAA64 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		838DB2CB249B37C8008EAA64 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		BA9DC2DA52D3C1663C1D26CB /* Pods_Communere.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Communere.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -126,6 +130,8 @@
 		838DB2C5249B2E7D008EAA64 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				838DB2C9249B37B3008EAA64 /* DataManager.swift */,
+				838DB2CB249B37C8008EAA64 /* UserDefault.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -143,7 +149,6 @@
 				3BCE685B555211127536A804 /* Pods-Communere.debug.xcconfig */,
 				7A3BD4A62C17285448953A4A /* Pods-Communere.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -262,6 +267,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				838DB2AC249B2598008EAA64 /* AppDelegate.swift in Sources */,
+				838DB2CA249B37B3008EAA64 /* DataManager.swift in Sources */,
+				838DB2CC249B37C8008EAA64 /* UserDefault.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
