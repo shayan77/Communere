@@ -42,11 +42,19 @@ class LoginVM {
             self.errorResponse.onNext(.blankField)
         } else if !isEmail(email: email) {
             self.errorResponse.onNext(.invalidEmail)
-        } else if (email != "aaa@gmail.com") || (password != "AAAAA") {
-            self.errorResponse.onNext(.wrongInformation)
-        } else {
+        } else if (email == "aaa@gmail.com") && (password == "AAAAA") {
+            UserDefaultsConfig.isUserLoggedIn = true
+            UserDefaultsConfig.isAdmin = true
             self.successResponse.onNext(true)
-        }        
+        } else {
+            if User.checkIsUserExist(email: email) {
+                UserDefaultsConfig.isUserLoggedIn = true
+                UserDefaultsConfig.isAdmin = false
+                self.successResponse.onNext(true)
+            } else {
+                self.errorResponse.onNext(.wrongInformation)
+            }
+        }
     }
     
     private func isEmail(email: String) -> Bool {

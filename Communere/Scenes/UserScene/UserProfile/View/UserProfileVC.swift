@@ -16,7 +16,10 @@ class UserProfileVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        print(UserDefaultsConfig.isAdmin)
+        print(UserDefaultsConfig.isUserLoggedIn)
+        print(User.users().count)
+
     }
     
 

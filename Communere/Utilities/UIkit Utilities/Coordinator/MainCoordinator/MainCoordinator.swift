@@ -28,10 +28,12 @@ class MainCoordinator: NSObject {
         window.rootViewController = navigationCoordinator
         window.makeKeyAndVisible()
         
+        print(UserDefaultsConfig.isUserLoggedIn)
+        
         if UserDefaultsConfig.isUserLoggedIn {
             toHomeScene()
         } else {
-            toHomeScene()
+            toLoginScene()
         }
     }
     

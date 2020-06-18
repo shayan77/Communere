@@ -20,7 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupCoordinator()
         
         setupIQKeyboardManager()
-                
+        
+        User.mockUsers()
+                        
         return true
     }
 

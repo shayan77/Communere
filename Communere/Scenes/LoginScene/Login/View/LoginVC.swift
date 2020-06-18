@@ -28,7 +28,7 @@ class LoginVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupView()
         setupBindings()
         setupResponseBinding()
@@ -85,7 +85,7 @@ class LoginVC: UIViewController {
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak self] _ in
                 guard let self = self else { return }
-                print("OKKKKKKK")
+                self.loginCoordinator?.goToMainPage()
             }).disposed(by: disposeBag)
     }
 }

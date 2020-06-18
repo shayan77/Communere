@@ -357,8 +357,8 @@
 		838DB308249B7D74008EAA64 /* UserProfile */ = {
 			isa = PBXGroup;
 			children = (
-				838DB30A249B7EC1008EAA64 /* View */,
 				838DB303249B7D18008EAA64 /* Model */,
+				838DB30A249B7EC1008EAA64 /* View */,
 			);
 			path = UserProfile;
 			sourceTree = "<group>";

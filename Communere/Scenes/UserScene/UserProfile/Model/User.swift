@@ -70,4 +70,18 @@ class User: NSObject, NSCoding {
         archivedUsers.removeAll()
         storeArray(array: archivedUsers)
     }
+    
+    static func checkIsUserExist(email: String) -> Bool {
+        if User.users().contains(where: { $0.email == email }) {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    static func mockUsers() {
+        for index in 0...10 {
+            User.insertUser(user: User(id: index, name: "user test \(index)", email: "email\(index)@gmail.com"))
+        }
+    }
 }
