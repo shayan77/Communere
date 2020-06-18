@@ -11,7 +11,6 @@
 		838DB2AC249B2598008EAA64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB2AB249B2598008EAA64 /* AppDelegate.swift */; };
 		838DB2B5249B2599008EAA64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 838DB2B4249B2599008EAA64 /* Assets.xcassets */; };
 		838DB2C8249B2FBA008EAA64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 838DB2C7249B2FBA008EAA64 /* LaunchScreen.storyboard */; };
-		838DB2CA249B37B3008EAA64 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB2C9249B37B3008EAA64 /* DataManager.swift */; };
 		838DB2CC249B37C8008EAA64 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB2CB249B37C8008EAA64 /* UserDefault.swift */; };
 		838DB2D0249B39C3008EAA64 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB2CF249B39C3008EAA64 /* Coordinator.swift */; };
 		838DB2D2249B39E7008EAA64 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB2D1249B39E7008EAA64 /* MainCoordinator.swift */; };
@@ -29,6 +28,11 @@
 		838DB2F8249B6219008EAA64 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB2F7249B6219008EAA64 /* SignupVC.swift */; };
 		838DB2FA249B6222008EAA64 /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 838DB2F9249B6222008EAA64 /* Signup.storyboard */; };
 		838DB2FC249B622E008EAA64 /* SignupVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB2FB249B622E008EAA64 /* SignupVM.swift */; };
+		838DB2FE249B6B42008EAA64 /* UIViewController+ShowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB2FD249B6B42008EAA64 /* UIViewController+ShowError.swift */; };
+		838DB302249B6F0F008EAA64 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB301249B6F0F008EAA64 /* User.swift */; };
+		838DB307249B7D63008EAA64 /* UserCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB306249B7D63008EAA64 /* UserCoordinator.swift */; };
+		838DB30C249B7ECF008EAA64 /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 838DB30B249B7ECF008EAA64 /* UserProfile.storyboard */; };
+		838DB30E249B7EDB008EAA64 /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB30D249B7EDB008EAA64 /* UserProfileVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +43,6 @@
 		838DB2B4249B2599008EAA64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		838DB2B9249B2599008EAA64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		838DB2C7249B2FBA008EAA64 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		838DB2C9249B37B3008EAA64 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		838DB2CB249B37C8008EAA64 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		838DB2CF249B39C3008EAA64 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		838DB2D1249B39E7008EAA64 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
@@ -57,6 +60,11 @@
 		838DB2F7249B6219008EAA64 /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		838DB2F9249B6222008EAA64 /* Signup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
 		838DB2FB249B622E008EAA64 /* SignupVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVM.swift; sourceTree = "<group>"; };
+		838DB2FD249B6B42008EAA64 /* UIViewController+ShowError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ShowError.swift"; sourceTree = "<group>"; };
+		838DB301249B6F0F008EAA64 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		838DB306249B7D63008EAA64 /* UserCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCoordinator.swift; sourceTree = "<group>"; };
+		838DB30B249B7ECF008EAA64 /* UserProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserProfile.storyboard; sourceTree = "<group>"; };
+		838DB30D249B7EDB008EAA64 /* UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
 		BA9DC2DA52D3C1663C1D26CB /* Pods_Communere.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Communere.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -137,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				838DB2D9249B3FE3008EAA64 /* LoginScene */,
+				838DB2FF249B6EE8008EAA64 /* UserScene */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -164,7 +173,6 @@
 		838DB2C5249B2E7D008EAA64 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				838DB2C9249B37B3008EAA64 /* DataManager.swift */,
 				838DB2CB249B37C8008EAA64 /* UserDefault.swift */,
 			);
 			path = Managers;
@@ -211,6 +219,7 @@
 			children = (
 				838DB2D7249B3DB2008EAA64 /* StoryboardNames.swift */,
 				838DB2E5249B41BC008EAA64 /* ViewContollerLoadable.swift */,
+				838DB2FD249B6B42008EAA64 /* UIViewController+ShowError.swift */,
 			);
 			path = "UIViewController Extensions";
 			sourceTree = "<group>";
@@ -319,6 +328,57 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		838DB2FF249B6EE8008EAA64 /* UserScene */ = {
+			isa = PBXGroup;
+			children = (
+				838DB304249B7D41008EAA64 /* UserCoordinator */,
+				838DB309249B7D7D008EAA64 /* UserList */,
+				838DB308249B7D74008EAA64 /* UserProfile */,
+			);
+			path = UserScene;
+			sourceTree = "<group>";
+		};
+		838DB303249B7D18008EAA64 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				838DB301249B6F0F008EAA64 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		838DB304249B7D41008EAA64 /* UserCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				838DB306249B7D63008EAA64 /* UserCoordinator.swift */,
+			);
+			path = UserCoordinator;
+			sourceTree = "<group>";
+		};
+		838DB308249B7D74008EAA64 /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				838DB30A249B7EC1008EAA64 /* View */,
+				838DB303249B7D18008EAA64 /* Model */,
+			);
+			path = UserProfile;
+			sourceTree = "<group>";
+		};
+		838DB309249B7D7D008EAA64 /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserList;
+			sourceTree = "<group>";
+		};
+		838DB30A249B7EC1008EAA64 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				838DB30D249B7EDB008EAA64 /* UserProfileVC.swift */,
+				838DB30B249B7ECF008EAA64 /* UserProfile.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		EF5A4F7C232A4CE844570B64 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -391,6 +451,7 @@
 				838DB2EB249B4A11008EAA64 /* CustomTextField.xib in Resources */,
 				838DB2B5249B2599008EAA64 /* Assets.xcassets in Resources */,
 				838DB2C8249B2FBA008EAA64 /* LaunchScreen.storyboard in Resources */,
+				838DB30C249B7ECF008EAA64 /* UserProfile.storyboard in Resources */,
 				838DB2FA249B6222008EAA64 /* Signup.storyboard in Resources */,
 				838DB2E4249B40DF008EAA64 /* Login.storyboard in Resources */,
 			);
@@ -448,16 +509,19 @@
 				838DB2F2249B5C42008EAA64 /* LoginVM.swift in Sources */,
 				838DB2ED249B4B6B008EAA64 /* InputType.swift in Sources */,
 				838DB2FC249B622E008EAA64 /* SignupVM.swift in Sources */,
+				838DB307249B7D63008EAA64 /* UserCoordinator.swift in Sources */,
+				838DB2FE249B6B42008EAA64 /* UIViewController+ShowError.swift in Sources */,
 				838DB2D0249B39C3008EAA64 /* Coordinator.swift in Sources */,
 				838DB2E9249B49F2008EAA64 /* CustomTextField.swift in Sources */,
 				838DB2AC249B2598008EAA64 /* AppDelegate.swift in Sources */,
 				838DB2F0249B5294008EAA64 /* ViewConnectable.swift in Sources */,
 				838DB2F8249B6219008EAA64 /* SignupVC.swift in Sources */,
-				838DB2CA249B37B3008EAA64 /* DataManager.swift in Sources */,
 				838DB2D2249B39E7008EAA64 /* MainCoordinator.swift in Sources */,
 				838DB2D8249B3DB2008EAA64 /* StoryboardNames.swift in Sources */,
 				838DB2E2249B40D5008EAA64 /* LoginVC.swift in Sources */,
 				838DB2D5249B3CDD008EAA64 /* ReactiveExtensions.swift in Sources */,
+				838DB302249B6F0F008EAA64 /* User.swift in Sources */,
+				838DB30E249B7EDB008EAA64 /* UserProfileVC.swift in Sources */,
 				838DB2E6249B41BC008EAA64 /* ViewContollerLoadable.swift in Sources */,
 				838DB2DD249B404F008EAA64 /* LoginCoordinator.swift in Sources */,
 				838DB2CC249B37C8008EAA64 /* UserDefault.swift in Sources */,
@@ -517,7 +581,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -571,7 +635,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -589,6 +653,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 674HNU4UMD;
 				INFOPLIST_FILE = "$(SRCROOT)/Communere/Support/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -608,6 +673,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 674HNU4UMD;
 				INFOPLIST_FILE = "$(SRCROOT)/Communere/Support/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
