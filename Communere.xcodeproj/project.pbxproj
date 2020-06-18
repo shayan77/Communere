@@ -13,6 +13,10 @@
 		838DB2C8249B2FBA008EAA64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 838DB2C7249B2FBA008EAA64 /* LaunchScreen.storyboard */; };
 		838DB2CA249B37B3008EAA64 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB2C9249B37B3008EAA64 /* DataManager.swift */; };
 		838DB2CC249B37C8008EAA64 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB2CB249B37C8008EAA64 /* UserDefault.swift */; };
+		838DB2D0249B39C3008EAA64 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB2CF249B39C3008EAA64 /* Coordinator.swift */; };
+		838DB2D2249B39E7008EAA64 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB2D1249B39E7008EAA64 /* MainCoordinator.swift */; };
+		838DB2D5249B3CDD008EAA64 /* ReactiveExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB2D4249B3CDD008EAA64 /* ReactiveExtensions.swift */; };
+		838DB2D8249B3DB2008EAA64 /* StoryboardNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB2D7249B3DB2008EAA64 /* StoryboardNames.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +29,10 @@
 		838DB2C7249B2FBA008EAA64 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		838DB2C9249B37B3008EAA64 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		838DB2CB249B37C8008EAA64 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
+		838DB2CF249B39C3008EAA64 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		838DB2D1249B39E7008EAA64 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		838DB2D4249B3CDD008EAA64 /* ReactiveExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveExtensions.swift; sourceTree = "<group>"; };
+		838DB2D7249B3DB2008EAA64 /* StoryboardNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardNames.swift; sourceTree = "<group>"; };
 		BA9DC2DA52D3C1663C1D26CB /* Pods_Communere.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Communere.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -139,8 +147,44 @@
 		838DB2C6249B2EBD008EAA64 /* UIkit Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				838DB2CD249B39A5008EAA64 /* Coordinator */,
+				838DB2D3249B3CC1008EAA64 /* Rx */,
+				838DB2D6249B3D70008EAA64 /* UIViewController Extensions */,
 			);
 			path = "UIkit Utilities";
+			sourceTree = "<group>";
+		};
+		838DB2CD249B39A5008EAA64 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				838DB2CE249B39B5008EAA64 /* MainCoordinator */,
+				838DB2CF249B39C3008EAA64 /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		838DB2CE249B39B5008EAA64 /* MainCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				838DB2D1249B39E7008EAA64 /* MainCoordinator.swift */,
+			);
+			path = MainCoordinator;
+			sourceTree = "<group>";
+		};
+		838DB2D3249B3CC1008EAA64 /* Rx */ = {
+			isa = PBXGroup;
+			children = (
+				838DB2D4249B3CDD008EAA64 /* ReactiveExtensions.swift */,
+			);
+			path = Rx;
+			sourceTree = "<group>";
+		};
+		838DB2D6249B3D70008EAA64 /* UIViewController Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				838DB2D7249B3DB2008EAA64 /* StoryboardNames.swift */,
+			);
+			path = "UIViewController Extensions";
 			sourceTree = "<group>";
 		};
 		EF5A4F7C232A4CE844570B64 /* Pods */ = {
@@ -266,8 +310,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				838DB2D0249B39C3008EAA64 /* Coordinator.swift in Sources */,
 				838DB2AC249B2598008EAA64 /* AppDelegate.swift in Sources */,
 				838DB2CA249B37B3008EAA64 /* DataManager.swift in Sources */,
+				838DB2D2249B39E7008EAA64 /* MainCoordinator.swift in Sources */,
+				838DB2D8249B3DB2008EAA64 /* StoryboardNames.swift in Sources */,
+				838DB2D5249B3CDD008EAA64 /* ReactiveExtensions.swift in Sources */,
 				838DB2CC249B37C8008EAA64 /* UserDefault.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
