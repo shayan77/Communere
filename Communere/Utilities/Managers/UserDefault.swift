@@ -10,8 +10,7 @@ import Foundation
 
 enum UserDefaultsKeys: String {
     case isUserLoggedIn  = "isUserLoggedIn"
-    case email           = "email"
-    case name            = "name"
+    case isAdmin         = "isAdmin"
 }
 
 @propertyWrapper
@@ -35,14 +34,11 @@ struct UserDefault<T> {
 }
 
 struct UserDefaultsConfig {
-    @UserDefault(.email, defaultValue: "")
-    static var email: String
-    
-    @UserDefault(.name, defaultValue: "")
-    static var name: String
-    
     @UserDefault(.isUserLoggedIn, defaultValue: false)
     static var isUserLoggedIn: Bool
+    
+    @UserDefault(.isAdmin, defaultValue: false)
+    static var isAdmin: Bool
     
     static func clearUserDefaultfor(_ key: UserDefaultsKeys) {
         UserDefaults.standard.removeObject(forKey: key.rawValue)

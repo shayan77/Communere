@@ -28,10 +28,10 @@ class MainCoordinator: NSObject {
         window.rootViewController = navigationCoordinator
         window.makeKeyAndVisible()
         
-        if DataManager.shared.isUserLoggedIn {
-            toLoginScene()
+        if UserDefaultsConfig.isUserLoggedIn {
+            toHomeScene()
         } else {
-            toLoginScene()
+            toHomeScene()
         }
     }
     
@@ -44,13 +44,10 @@ class MainCoordinator: NSObject {
     }
     
     func toHomeScene() {
-
-//        navigationCoordinator.setViewControllers([], animated: false)
-//
-//        buildTabBarScene()
-//
-//        window?.rootViewController = self.tabCoordinator
-//        window?.makeKeyAndVisible()
+        let child = UserCoordinator(navigationController: navigationCoordinator)
+        child.parentCoordinator = self
+        childCoordinators?.append(child)
+        child.start()
     }
 }
 
