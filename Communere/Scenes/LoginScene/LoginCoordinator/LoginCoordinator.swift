@@ -33,11 +33,11 @@ class LoginCoordinator: Coordinator {
         navigationCoordinator.pushViewController(loginVC, animated: true)
     }
     
-//    func navigateToVerify() {
-//        let verifyAccountVC: VerifyAccountVC = VerifyAccountVC.instantiate(storyboard: .verifyAccount)
-//        verifyAccountVC.registerCoordinator = self
-//        navigationCoordinator.pushViewController(verifyAccountVC, animated: true)
-//    }
+    func navigateToSignup() {
+        let signupVC: SignupVC = SignupVC.instantiate(storyboard: .signup)
+        signupVC.loginCoordinator = self
+        navigationCoordinator.pushViewController(signupVC, animated: true)
+    }
     
     func goToMainPage() {
         loginFinishDelegate?.onFinish(coordinator: self)

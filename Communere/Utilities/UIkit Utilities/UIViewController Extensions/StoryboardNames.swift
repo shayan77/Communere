@@ -11,7 +11,7 @@ import UIKit
 enum Storyboard {
         
     case login
-    case verifyAccount
+    case signup
     
     var storyboard: UIStoryboard {
         
@@ -20,8 +20,8 @@ enum Storyboard {
         switch self {
         case .login:
             storyboardName = "Login"
-        case .verifyAccount:
-            storyboardName = "VerifyAccount"
+        case .signup:
+            storyboardName = "Signup"
         }
         
         return UIStoryboard(name: storyboardName, bundle: Bundle.main)
