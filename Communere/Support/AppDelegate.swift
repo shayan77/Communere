@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         setupCoordinator()
+        
+        setupIQKeyboardManager()
                 
         return true
     }
@@ -27,6 +30,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         appCoordinator = MainCoordinator(navigationController: navController, window: window)
         appCoordinator.start()
+    }
+    
+    fileprivate func setupIQKeyboardManager() {
+        IQKeyboardManager.shared.enable = true
     }
 }
 

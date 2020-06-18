@@ -17,6 +17,18 @@
 		838DB2D2249B39E7008EAA64 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB2D1249B39E7008EAA64 /* MainCoordinator.swift */; };
 		838DB2D5249B3CDD008EAA64 /* ReactiveExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB2D4249B3CDD008EAA64 /* ReactiveExtensions.swift */; };
 		838DB2D8249B3DB2008EAA64 /* StoryboardNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB2D7249B3DB2008EAA64 /* StoryboardNames.swift */; };
+		838DB2DD249B404F008EAA64 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB2DC249B404F008EAA64 /* LoginCoordinator.swift */; };
+		838DB2E2249B40D5008EAA64 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB2E1249B40D5008EAA64 /* LoginVC.swift */; };
+		838DB2E4249B40DF008EAA64 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 838DB2E3249B40DF008EAA64 /* Login.storyboard */; };
+		838DB2E6249B41BC008EAA64 /* ViewContollerLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB2E5249B41BC008EAA64 /* ViewContollerLoadable.swift */; };
+		838DB2E9249B49F2008EAA64 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB2E8249B49F2008EAA64 /* CustomTextField.swift */; };
+		838DB2EB249B4A11008EAA64 /* CustomTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 838DB2EA249B4A11008EAA64 /* CustomTextField.xib */; };
+		838DB2ED249B4B6B008EAA64 /* InputType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB2EC249B4B6B008EAA64 /* InputType.swift */; };
+		838DB2F0249B5294008EAA64 /* ViewConnectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB2EF249B5294008EAA64 /* ViewConnectable.swift */; };
+		838DB2F2249B5C42008EAA64 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB2F1249B5C42008EAA64 /* LoginVM.swift */; };
+		838DB2F8249B6219008EAA64 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB2F7249B6219008EAA64 /* SignupVC.swift */; };
+		838DB2FA249B6222008EAA64 /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 838DB2F9249B6222008EAA64 /* Signup.storyboard */; };
+		838DB2FC249B622E008EAA64 /* SignupVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB2FB249B622E008EAA64 /* SignupVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +45,18 @@
 		838DB2D1249B39E7008EAA64 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		838DB2D4249B3CDD008EAA64 /* ReactiveExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveExtensions.swift; sourceTree = "<group>"; };
 		838DB2D7249B3DB2008EAA64 /* StoryboardNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardNames.swift; sourceTree = "<group>"; };
+		838DB2DC249B404F008EAA64 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		838DB2E1249B40D5008EAA64 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		838DB2E3249B40DF008EAA64 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		838DB2E5249B41BC008EAA64 /* ViewContollerLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewContollerLoadable.swift; sourceTree = "<group>"; };
+		838DB2E8249B49F2008EAA64 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		838DB2EA249B4A11008EAA64 /* CustomTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTextField.xib; sourceTree = "<group>"; };
+		838DB2EC249B4B6B008EAA64 /* InputType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputType.swift; sourceTree = "<group>"; };
+		838DB2EF249B5294008EAA64 /* ViewConnectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConnectable.swift; sourceTree = "<group>"; };
+		838DB2F1249B5C42008EAA64 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
+		838DB2F7249B6219008EAA64 /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
+		838DB2F9249B6222008EAA64 /* Signup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
+		838DB2FB249B622E008EAA64 /* SignupVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVM.swift; sourceTree = "<group>"; };
 		BA9DC2DA52D3C1663C1D26CB /* Pods_Communere.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Communere.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -90,6 +114,7 @@
 		838DB2BF249B2E0C008EAA64 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				838DB2E7249B49AB008EAA64 /* CustomTextField */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -111,6 +136,7 @@
 		838DB2C2249B2E3C008EAA64 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				838DB2D9249B3FE3008EAA64 /* LoginScene */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -147,6 +173,7 @@
 		838DB2C6249B2EBD008EAA64 /* UIkit Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				838DB2EE249B527A008EAA64 /* Nib Extensions */,
 				838DB2CD249B39A5008EAA64 /* Coordinator */,
 				838DB2D3249B3CC1008EAA64 /* Rx */,
 				838DB2D6249B3D70008EAA64 /* UIViewController Extensions */,
@@ -183,8 +210,113 @@
 			isa = PBXGroup;
 			children = (
 				838DB2D7249B3DB2008EAA64 /* StoryboardNames.swift */,
+				838DB2E5249B41BC008EAA64 /* ViewContollerLoadable.swift */,
 			);
 			path = "UIViewController Extensions";
+			sourceTree = "<group>";
+		};
+		838DB2D9249B3FE3008EAA64 /* LoginScene */ = {
+			isa = PBXGroup;
+			children = (
+				838DB2DA249B400C008EAA64 /* LoginCoordinator */,
+				838DB2DB249B4033008EAA64 /* Login */,
+				838DB2F3249B61E3008EAA64 /* Signup */,
+			);
+			path = LoginScene;
+			sourceTree = "<group>";
+		};
+		838DB2DA249B400C008EAA64 /* LoginCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				838DB2DC249B404F008EAA64 /* LoginCoordinator.swift */,
+			);
+			path = LoginCoordinator;
+			sourceTree = "<group>";
+		};
+		838DB2DB249B4033008EAA64 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				838DB2DE249B40A4008EAA64 /* Model */,
+				838DB2DF249B40A9008EAA64 /* View */,
+				838DB2E0249B40AD008EAA64 /* ViewModel */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		838DB2DE249B40A4008EAA64 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		838DB2DF249B40A9008EAA64 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				838DB2E1249B40D5008EAA64 /* LoginVC.swift */,
+				838DB2E3249B40DF008EAA64 /* Login.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		838DB2E0249B40AD008EAA64 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				838DB2F1249B5C42008EAA64 /* LoginVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		838DB2E7249B49AB008EAA64 /* CustomTextField */ = {
+			isa = PBXGroup;
+			children = (
+				838DB2E8249B49F2008EAA64 /* CustomTextField.swift */,
+				838DB2EA249B4A11008EAA64 /* CustomTextField.xib */,
+				838DB2EC249B4B6B008EAA64 /* InputType.swift */,
+			);
+			path = CustomTextField;
+			sourceTree = "<group>";
+		};
+		838DB2EE249B527A008EAA64 /* Nib Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				838DB2EF249B5294008EAA64 /* ViewConnectable.swift */,
+			);
+			path = "Nib Extensions";
+			sourceTree = "<group>";
+		};
+		838DB2F3249B61E3008EAA64 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				838DB2F4249B61F0008EAA64 /* Model */,
+				838DB2F5249B61F6008EAA64 /* View */,
+				838DB2F6249B61FB008EAA64 /* ViewModel */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		838DB2F4249B61F0008EAA64 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		838DB2F5249B61F6008EAA64 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				838DB2F7249B6219008EAA64 /* SignupVC.swift */,
+				838DB2F9249B6222008EAA64 /* Signup.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		838DB2F6249B61FB008EAA64 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				838DB2FB249B622E008EAA64 /* SignupVM.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		EF5A4F7C232A4CE844570B64 /* Pods */ = {
@@ -256,8 +388,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				838DB2EB249B4A11008EAA64 /* CustomTextField.xib in Resources */,
 				838DB2B5249B2599008EAA64 /* Assets.xcassets in Resources */,
 				838DB2C8249B2FBA008EAA64 /* LaunchScreen.storyboard in Resources */,
+				838DB2FA249B6222008EAA64 /* Signup.storyboard in Resources */,
+				838DB2E4249B40DF008EAA64 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,12 +445,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				838DB2F2249B5C42008EAA64 /* LoginVM.swift in Sources */,
+				838DB2ED249B4B6B008EAA64 /* InputType.swift in Sources */,
+				838DB2FC249B622E008EAA64 /* SignupVM.swift in Sources */,
 				838DB2D0249B39C3008EAA64 /* Coordinator.swift in Sources */,
+				838DB2E9249B49F2008EAA64 /* CustomTextField.swift in Sources */,
 				838DB2AC249B2598008EAA64 /* AppDelegate.swift in Sources */,
+				838DB2F0249B5294008EAA64 /* ViewConnectable.swift in Sources */,
+				838DB2F8249B6219008EAA64 /* SignupVC.swift in Sources */,
 				838DB2CA249B37B3008EAA64 /* DataManager.swift in Sources */,
 				838DB2D2249B39E7008EAA64 /* MainCoordinator.swift in Sources */,
 				838DB2D8249B3DB2008EAA64 /* StoryboardNames.swift in Sources */,
+				838DB2E2249B40D5008EAA64 /* LoginVC.swift in Sources */,
 				838DB2D5249B3CDD008EAA64 /* ReactiveExtensions.swift in Sources */,
+				838DB2E6249B41BC008EAA64 /* ViewContollerLoadable.swift in Sources */,
+				838DB2DD249B404F008EAA64 /* LoginCoordinator.swift in Sources */,
 				838DB2CC249B37C8008EAA64 /* UserDefault.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
