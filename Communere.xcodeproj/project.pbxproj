@@ -30,6 +30,7 @@
 		838DB2FA249B6222008EAA64 /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 838DB2F9249B6222008EAA64 /* Signup.storyboard */; };
 		838DB2FC249B622E008EAA64 /* SignupVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB2FB249B622E008EAA64 /* SignupVM.swift */; };
 		838DB2FE249B6B42008EAA64 /* UIViewController+ShowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB2FD249B6B42008EAA64 /* UIViewController+ShowError.swift */; };
+		838DB302249B6F0F008EAA64 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB301249B6F0F008EAA64 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		838DB2F9249B6222008EAA64 /* Signup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
 		838DB2FB249B622E008EAA64 /* SignupVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVM.swift; sourceTree = "<group>"; };
 		838DB2FD249B6B42008EAA64 /* UIViewController+ShowError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ShowError.swift"; sourceTree = "<group>"; };
+		838DB301249B6F0F008EAA64 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BA9DC2DA52D3C1663C1D26CB /* Pods_Communere.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Communere.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -138,6 +140,7 @@
 		838DB2C2249B2E3C008EAA64 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				838DB2FF249B6EE8008EAA64 /* User */,
 				838DB2D9249B3FE3008EAA64 /* LoginScene */,
 			);
 			path = Scenes;
@@ -322,6 +325,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		838DB2FF249B6EE8008EAA64 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				838DB301249B6F0F008EAA64 /* User.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		EF5A4F7C232A4CE844570B64 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -462,6 +473,7 @@
 				838DB2D8249B3DB2008EAA64 /* StoryboardNames.swift in Sources */,
 				838DB2E2249B40D5008EAA64 /* LoginVC.swift in Sources */,
 				838DB2D5249B3CDD008EAA64 /* ReactiveExtensions.swift in Sources */,
+				838DB302249B6F0F008EAA64 /* User.swift in Sources */,
 				838DB2E6249B41BC008EAA64 /* ViewContollerLoadable.swift in Sources */,
 				838DB2DD249B404F008EAA64 /* LoginCoordinator.swift in Sources */,
 				838DB2CC249B37C8008EAA64 /* UserDefault.swift in Sources */,
@@ -521,7 +533,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -575,7 +587,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -593,6 +605,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 674HNU4UMD;
 				INFOPLIST_FILE = "$(SRCROOT)/Communere/Support/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -612,6 +625,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 674HNU4UMD;
 				INFOPLIST_FILE = "$(SRCROOT)/Communere/Support/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
