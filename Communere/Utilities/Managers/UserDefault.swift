@@ -10,7 +10,8 @@ import Foundation
 
 enum UserDefaultsKeys: String {
     case isUserLoggedIn  = "isUserLoggedIn"
-    case userMobile      = "userMobile"
+    case email           = "email"
+    case name            = "name"
 }
 
 @propertyWrapper
@@ -34,8 +35,11 @@ struct UserDefault<T> {
 }
 
 struct UserDefaultsConfig {
-    @UserDefault(.userMobile, defaultValue: "")
-    static var userMobile: String
+    @UserDefault(.email, defaultValue: "")
+    static var email: String
+    
+    @UserDefault(.name, defaultValue: "")
+    static var name: String
     
     @UserDefault(.isUserLoggedIn, defaultValue: false)
     static var isUserLoggedIn: Bool

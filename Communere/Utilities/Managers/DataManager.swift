@@ -16,7 +16,8 @@ class DataManager {
     
     private init () {
         self.isUserLoggedIn = UserDefaultsConfig.isUserLoggedIn
-        self.mobile         = UserDefaultsConfig.userMobile
+        self.email          = UserDefaultsConfig.email
+        self.name           = UserDefaultsConfig.name
     }
     
     var isUserLoggedIn: Bool! {
@@ -25,9 +26,15 @@ class DataManager {
         }
     }
     
-    var mobile: String! {
+    var email: String! {
         didSet {
-            UserDefaultsConfig.userMobile = mobile
+            UserDefaultsConfig.email = email
+        }
+    }
+    
+    var name: String! {
+        didSet {
+            UserDefaultsConfig.name = name
         }
     }
 }

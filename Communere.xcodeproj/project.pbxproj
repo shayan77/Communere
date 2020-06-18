@@ -29,6 +29,7 @@
 		838DB2F8249B6219008EAA64 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB2F7249B6219008EAA64 /* SignupVC.swift */; };
 		838DB2FA249B6222008EAA64 /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 838DB2F9249B6222008EAA64 /* Signup.storyboard */; };
 		838DB2FC249B622E008EAA64 /* SignupVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB2FB249B622E008EAA64 /* SignupVM.swift */; };
+		838DB2FE249B6B42008EAA64 /* UIViewController+ShowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB2FD249B6B42008EAA64 /* UIViewController+ShowError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		838DB2F7249B6219008EAA64 /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		838DB2F9249B6222008EAA64 /* Signup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
 		838DB2FB249B622E008EAA64 /* SignupVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVM.swift; sourceTree = "<group>"; };
+		838DB2FD249B6B42008EAA64 /* UIViewController+ShowError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ShowError.swift"; sourceTree = "<group>"; };
 		BA9DC2DA52D3C1663C1D26CB /* Pods_Communere.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Communere.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -211,6 +213,7 @@
 			children = (
 				838DB2D7249B3DB2008EAA64 /* StoryboardNames.swift */,
 				838DB2E5249B41BC008EAA64 /* ViewContollerLoadable.swift */,
+				838DB2FD249B6B42008EAA64 /* UIViewController+ShowError.swift */,
 			);
 			path = "UIViewController Extensions";
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 				838DB2F2249B5C42008EAA64 /* LoginVM.swift in Sources */,
 				838DB2ED249B4B6B008EAA64 /* InputType.swift in Sources */,
 				838DB2FC249B622E008EAA64 /* SignupVM.swift in Sources */,
+				838DB2FE249B6B42008EAA64 /* UIViewController+ShowError.swift in Sources */,
 				838DB2D0249B39C3008EAA64 /* Coordinator.swift in Sources */,
 				838DB2E9249B49F2008EAA64 /* CustomTextField.swift in Sources */,
 				838DB2AC249B2598008EAA64 /* AppDelegate.swift in Sources */,

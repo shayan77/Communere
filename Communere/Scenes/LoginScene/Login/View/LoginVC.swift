@@ -34,18 +34,6 @@ class LoginVC: UIViewController {
         setupResponseBinding()
     }
     
-    private func showError(error: String) {
-        self.errorLbl.text = error
-        UIView.animate(withDuration: 0.6, animations: {
-            self.errorLbl.alpha = 1.0
-        })
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
-            UIView.animate(withDuration: 0.6, animations: {
-                self.errorLbl.alpha = 0.0
-            })
-        })
-    }
-    
     // MARK: - Func
     private func setupView() {
     
@@ -83,11 +71,11 @@ class LoginVC: UIViewController {
                 guard let self = self else { return }
                 switch errorMessage {
                 case .blankField:
-                    self.showError(error: errorMessage.errorValue)
+                    self.showError(label: self.errorLbl, error: errorMessage.errorValue)
                 case .invalidEmail:
-                    self.showError(error: errorMessage.errorValue)
+                    self.showError(label: self.errorLbl, error: errorMessage.errorValue)
                 case .wrongInformation:
-                    self.showError(error: errorMessage.errorValue)
+                    self.showError(label: self.errorLbl, error: errorMessage.errorValue)
                 case .unknown:
                     break
                 }
