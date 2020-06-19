@@ -122,8 +122,6 @@
 			isa = PBXGroup;
 			children = (
 				838DB2BF249B2E0C008EAA64 /* Components */,
-				838DB2C0249B2E1E008EAA64 /* Networking */,
-				838DB2C1249B2E29008EAA64 /* Resources */,
 				838DB2C2249B2E3C008EAA64 /* Scenes */,
 				838DB2C3249B2E51008EAA64 /* Support */,
 				838DB2C4249B2E59008EAA64 /* Utilities */,
@@ -137,20 +135,6 @@
 				838DB2E7249B49AB008EAA64 /* CustomTextField */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		838DB2C0249B2E1E008EAA64 /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Networking;
-			sourceTree = "<group>";
-		};
-		838DB2C1249B2E29008EAA64 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		838DB2C2249B2E3C008EAA64 /* Scenes */ = {
