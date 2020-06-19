@@ -35,17 +35,20 @@ class User: NSObject, NSCoding {
     static func setCurrentUser(user: User) {
         let encodedData = NSKeyedArchiver.archivedData(withRootObject: user)
         UserDefaults.standard.set(encodedData, forKey: "user")
+        UserDefaults.standard.synchronize()
     }
     
     static func currentUser() -> User {
         let defaults = UserDefaults.standard
         let data = defaults.object(forKey: "user") as! Data
         return NSKeyedUnarchiver.unarchiveObject(with: data) as! User
+        UserDefaults.standard.synchronize()
     }
     
     static func storeArray(array: [User]) {
         let encodedData = NSKeyedArchiver.archivedData(withRootObject: array)
         UserDefaults.standard.set(encodedData, forKey: "users")
+        UserDefaults.standard.synchronize()
     }
     
     static func users() -> [User] {

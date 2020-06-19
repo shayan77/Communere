@@ -14,22 +14,71 @@ class UsersListVC: UIViewController {
     
     // MARK: - Coordinator
     weak var userCoordinator: UserCoordinator?
-
+    
+    @IBOutlet var usersListTableView: UITableView!
+    
+    let disposeBag = DisposeBag()
+    
+    let usersListVM = UsersListVM()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupView()
+        setupResponseBinding()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Func
+    private func setupView() {
+    
+        // nameLbl
+        usersListTableView.register(UINib(nibName: "UserCell", bundle: nil), forCellReuseIdentifier: "UserCell")
+        usersListTableView.delegate = self
+        usersListTableView.dataSource = self
     }
-    */
+    
+    // MARK: - Setup ResponseBinding
+    func setupResponseBinding() {
+        
+        usersListVM.successResponseOnDelete
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { [weak self] indexPath in
+                guard let self = self else { return }
+                self.usersListTableView.deleteRows(at: [indexPath], with: .automatic)
+            }).disposed(by: disposeBag)
+    }
+}
 
+extension UsersListVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 75
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.userCoordinator?.navigateToUserProfile(user: User.users()[indexPath.row])
+    }
+}
+
+extension UsersListVC: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return User.users().count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath) as? UserCell {
+            let user = User.users()[indexPath.row]
+            cell.configureCell(data: user)
+            cell.delegate = self
+            cell.indexPath = indexPath
+            return cell
+        } else {
+            return UITableViewCell()
+        }
+    }
+}
+
+extension UsersListVC: UserDelegate {
+    func deleteBtnPressed(at index: IndexPath) {
+        self.usersListVM.deleteUserWith(User.users()[index.row], index: index)
+    }
 }

@@ -48,6 +48,7 @@ class UserCoordinator: NSObject, Coordinator {
     func navigateToUserProfile(user: User) {
         let userProfileVC: UserProfileVC = UserProfileVC.instantiate(storyboard: .userProfile)
         userProfileVC.userCoordinator = self
+        User.setCurrentUser(user: user)
         navigationCoordinator.pushViewController(userProfileVC, animated: true)
     }
     

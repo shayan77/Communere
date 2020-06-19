@@ -16,28 +16,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="SIT-AP-5bL">
-                                <rect key="frame" x="20" y="64.5" width="75" height="74"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="75" id="rzc-4I-CaA"/>
-                                    <constraint firstAttribute="height" constant="75" id="wfU-Aw-vGr"/>
-                                </constraints>
-                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="M8F-tm-iGL">
+                                <rect key="frame" x="0.0" y="74" width="414" height="788"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="SIT-AP-5bL" firstAttribute="top" secondItem="lU1-Bm-AV0" secondAttribute="top" constant="20" id="ckS-7e-ftu"/>
-                            <constraint firstItem="SIT-AP-5bL" firstAttribute="leading" secondItem="lU1-Bm-AV0" secondAttribute="leading" constant="20" id="igC-bH-5vw"/>
+                            <constraint firstItem="M8F-tm-iGL" firstAttribute="top" secondItem="lU1-Bm-AV0" secondAttribute="top" constant="30" id="0Lr-3m-rsL"/>
+                            <constraint firstItem="M8F-tm-iGL" firstAttribute="leading" secondItem="lU1-Bm-AV0" secondAttribute="leading" id="4WP-5Q-LC0"/>
+                            <constraint firstItem="lU1-Bm-AV0" firstAttribute="trailing" secondItem="M8F-tm-iGL" secondAttribute="trailing" id="6df-2A-6uC"/>
+                            <constraint firstItem="lU1-Bm-AV0" firstAttribute="bottom" secondItem="M8F-tm-iGL" secondAttribute="bottom" id="Rcw-Db-gp4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lU1-Bm-AV0"/>
                     </view>
+                    <connections>
+                        <outlet property="usersListTableView" destination="M8F-tm-iGL" id="ppd-kY-6bQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JBH-lf-3dv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-49" y="108"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
-    </resources>
 </document>

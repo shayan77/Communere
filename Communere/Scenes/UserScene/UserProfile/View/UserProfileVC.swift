@@ -25,7 +25,7 @@ class UserProfileVC: UIViewController {
     let disposeBag = DisposeBag()
     
     let userProfileVM = UserProfileVM()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
