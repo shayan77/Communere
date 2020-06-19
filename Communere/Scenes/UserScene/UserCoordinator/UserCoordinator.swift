@@ -29,9 +29,15 @@ class UserCoordinator: NSObject, Coordinator {
     }
 
     func start() {
-        let userProfileVC: UserProfileVC = UserProfileVC.instantiate(storyboard: .userProfile)
-        userProfileVC.userCoordinator = self
-        navigationCoordinator.pushViewController(userProfileVC, animated: true)
+        if UserDefaultsConfig.isAdmin {
+            let usersListVC: UsersListVC = UsersListVC.instantiate(storyboard: .usersList)
+            usersListVC.userCoordinator = self
+            navigationCoordinator.pushViewController(usersListVC, animated: true)
+        } else {
+            let userProfileVC: UserProfileVC = UserProfileVC.instantiate(storyboard: .userProfile)
+            userProfileVC.userCoordinator = self
+            navigationCoordinator.pushViewController(userProfileVC, animated: true)
+        }
     }
     
     func goToLogiPage() {
@@ -39,11 +45,11 @@ class UserCoordinator: NSObject, Coordinator {
         parentCoordinator?.toLoginScene()
     }
     
-//    func navigateToSignup() {
-//        let signupVC: SignupVC = SignupVC.instantiate(storyboard: .signup)
-//        signupVC.loginCoordinator = self
-//        navigationCoordinator.pushViewController(signupVC, animated: true)
-//    }
+    func navigateToUserProfile(user: User) {
+        let userProfileVC: UserProfileVC = UserProfileVC.instantiate(storyboard: .userProfile)
+        userProfileVC.userCoordinator = self
+        navigationCoordinator.pushViewController(userProfileVC, animated: true)
+    }
     
     deinit {
         print("REMOVED \(self) FROM MEMORY")

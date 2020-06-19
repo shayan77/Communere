@@ -34,6 +34,8 @@
 		838DB30C249B7ECF008EAA64 /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 838DB30B249B7ECF008EAA64 /* UserProfile.storyboard */; };
 		838DB30E249B7EDB008EAA64 /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB30D249B7EDB008EAA64 /* UserProfileVC.swift */; };
 		83C10120249CEAB500273674 /* UserProfileVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C1011F249CEAB500273674 /* UserProfileVM.swift */; };
+		83C77CBB249CF28B006DEBCA /* UsersListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C77CBA249CF28B006DEBCA /* UsersListVC.swift */; };
+		83C77CBD249CF297006DEBCA /* UsersList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83C77CBC249CF297006DEBCA /* UsersList.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +69,8 @@
 		838DB30B249B7ECF008EAA64 /* UserProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserProfile.storyboard; sourceTree = "<group>"; };
 		838DB30D249B7EDB008EAA64 /* UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
 		83C1011F249CEAB500273674 /* UserProfileVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVM.swift; sourceTree = "<group>"; };
+		83C77CBA249CF28B006DEBCA /* UsersListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListVC.swift; sourceTree = "<group>"; };
+		83C77CBC249CF297006DEBCA /* UsersList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UsersList.storyboard; sourceTree = "<group>"; };
 		BA9DC2DA52D3C1663C1D26CB /* Pods_Communere.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Communere.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -369,6 +373,8 @@
 		838DB309249B7D7D008EAA64 /* UserList */ = {
 			isa = PBXGroup;
 			children = (
+				83C77CB7249CF252006DEBCA /* View */,
+				83C77CB8249CF259006DEBCA /* ViewModel */,
 			);
 			path = UserList;
 			sourceTree = "<group>";
@@ -388,6 +394,30 @@
 				83C1011F249CEAB500273674 /* UserProfileVM.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		83C77CB7249CF252006DEBCA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				83C77CB9249CF264006DEBCA /* Cell */,
+				83C77CBA249CF28B006DEBCA /* UsersListVC.swift */,
+				83C77CBC249CF297006DEBCA /* UsersList.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		83C77CB8249CF259006DEBCA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		83C77CB9249CF264006DEBCA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		EF5A4F7C232A4CE844570B64 /* Pods */ = {
@@ -462,6 +492,7 @@
 				838DB2EB249B4A11008EAA64 /* CustomTextField.xib in Resources */,
 				838DB2B5249B2599008EAA64 /* Assets.xcassets in Resources */,
 				838DB2C8249B2FBA008EAA64 /* LaunchScreen.storyboard in Resources */,
+				83C77CBD249CF297006DEBCA /* UsersList.storyboard in Resources */,
 				838DB30C249B7ECF008EAA64 /* UserProfile.storyboard in Resources */,
 				838DB2FA249B6222008EAA64 /* Signup.storyboard in Resources */,
 				838DB2E4249B40DF008EAA64 /* Login.storyboard in Resources */,
@@ -536,6 +567,7 @@
 				838DB30E249B7EDB008EAA64 /* UserProfileVC.swift in Sources */,
 				838DB2E6249B41BC008EAA64 /* ViewContollerLoadable.swift in Sources */,
 				838DB2DD249B404F008EAA64 /* LoginCoordinator.swift in Sources */,
+				83C77CBB249CF28B006DEBCA /* UsersListVC.swift in Sources */,
 				838DB2CC249B37C8008EAA64 /* UserDefault.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

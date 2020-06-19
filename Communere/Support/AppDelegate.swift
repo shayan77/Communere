@@ -21,7 +21,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         setupIQKeyboardManager()
         
-        User.mockUsers()
+        let userDefaults = UserDefaults.standard
+        if !userDefaults.bool(forKey: "first-time") {
+            User.mockUsers()
+            userDefaults.set(true, forKey: "first-time")
+            userDefaults.synchronize()
+        }
                         
         return true
     }
