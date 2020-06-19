@@ -36,7 +36,7 @@ class SignupVM {
     let successResponse: PublishSubject<Bool> = PublishSubject()
     let errorResponse: PublishSubject<SignupError> = PublishSubject()
     
-    func loginUserWith(_ name: String, email: String, password: String, confirmPassword: String) {
+    func signupUserWith(_ name: String, email: String, password: String, confirmPassword: String) {
         
         if (name.isEmpty || email.isEmpty || password.isEmpty || confirmPassword.isEmpty) {
             self.errorResponse.onNext(.blankField)
@@ -45,6 +45,10 @@ class SignupVM {
         } else if (password != confirmPassword) {
             self.errorResponse.onNext(.password)
         } else {
+            User.insertUser(user: User(id: User.users().count, name: name, email: email))
+            UserDefaultsConfig.isUserLoggedIn = true
+            UserDefaultsConfig.isAdmin = false
+            User.setCurrentUser(user: User(id: User.users().count, name: name, email: email))
             self.successResponse.onNext(true)
         }
     }

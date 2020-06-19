@@ -66,34 +66,34 @@ class SignupVC: UIViewController {
             .throttle(RxTimeInterval.milliseconds(100), scheduler: MainScheduler.instance)
             .subscribe(onNext: { [weak self] in
                 guard let self = self else { return }
-                self.loginCoordinator?.navigateToSignup()
+                self.signupVM.signupUserWith(self.fullNameView.inputTF.text ?? "", email: self.emailView.inputTF.text ?? "", password: self.passwordView.inputTF.text ?? "", confirmPassword: self.confirmPasswordView.inputTF.text ?? "")
             }).disposed(by: disposeBag)
     }
     
     // MARK: - Setup ResponseBinding
     func setupResponseBinding() {
         
-//        loginVM.errorResponse
-//            .observeOn(MainScheduler.instance)
-//            .subscribe(onNext: { [weak self] (errorMessage) in
-//                guard let self = self else { return }
-//                switch errorMessage {
-//                case .blankField:
-//                    self.showError(label: self.errorLbl, error: errorMessage.errorValue)
-//                case .invalidEmail:
-//                    self.showError(label: self.errorLbl, error: errorMessage.errorValue)
-//                case .wrongInformation:
-//                    self.showError(label: self.errorLbl, error: errorMessage.errorValue)
-//                case .unknown:
-//                    break
-//                }
-//            }).disposed(by: disposeBag)
-//        
-//        loginVM.successResponse
-//            .observeOn(MainScheduler.instance)
-//            .subscribe(onNext: { [weak self] _ in
-//                guard let self = self else { return }
-//                print("OKKKKKKK")
-//            }).disposed(by: disposeBag)
+        signupVM.errorResponse
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { [weak self] (errorMessage) in
+                guard let self = self else { return }
+                switch errorMessage {
+                case .blankField:
+                    self.showError(label: self.errorLbl, error: errorMessage.errorValue)
+                case .invalidEmail:
+                    self.showError(label: self.errorLbl, error: errorMessage.errorValue)
+                case .password:
+                    self.showError(label: self.errorLbl, error: errorMessage.errorValue)
+                case .unknown:
+                    break
+                }
+            }).disposed(by: disposeBag)
+        
+        signupVM.successResponse
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                self.loginCoordinator?.goToMainPage()
+            }).disposed(by: disposeBag)
     }
 }

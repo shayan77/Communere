@@ -41,8 +41,8 @@ class User: NSObject, NSCoding {
     static func currentUser() -> User {
         let defaults = UserDefaults.standard
         let data = defaults.object(forKey: "user") as! Data
-        return NSKeyedUnarchiver.unarchiveObject(with: data) as! User
         UserDefaults.standard.synchronize()
+        return NSKeyedUnarchiver.unarchiveObject(with: data) as! User
     }
     
     static func storeArray(array: [User]) {

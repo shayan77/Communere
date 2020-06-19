@@ -47,6 +47,13 @@ class UserProfileVC: UIViewController {
         // passwordView
         nameView.inputType = .name
         nameView.inputTF.text = User.currentUser().name ?? ""
+        
+        if UserDefaultsConfig.isAdmin {
+            deleteBtn.isHidden = true
+            updateBtn.isHidden = true
+            emailView.isUserInteractionEnabled = false
+            nameView.isUserInteractionEnabled = false
+        }
     }
     
     private func setupBindings() {
