@@ -7,30 +7,95 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class UserProfileVC: UIViewController {
     
     // MARK: - Coordinator
     weak var userCoordinator: UserCoordinator?
+    
+    @IBOutlet var nameLbl: UILabel!
+    @IBOutlet var emailView: CustomTextField!
+    @IBOutlet var nameView: CustomTextField!
+    @IBOutlet var deleteBtn: UIButton!
+    @IBOutlet var updateBtn: UIButton!
+    @IBOutlet var messageLbl: UILabel!
+    
+    let disposeBag = DisposeBag()
+    
+    let userProfileVM = UserProfileVM()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print(UserDefaultsConfig.isAdmin)
-        print(UserDefaultsConfig.isUserLoggedIn)
-        print(User.users().count)
-
+        setupView()
+        setupBindings()
+        setupResponseBinding()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Func
+    private func setupView() {
+    
+        // nameLbl
+        nameLbl.text = User.currentUser().name ?? ""
+        
+        // emailView
+        emailView.inputType = .email
+        emailView.inputTF.text = User.currentUser().email ?? ""
+        
+        // passwordView
+        nameView.inputType = .name
+        nameView.inputTF.text = User.currentUser().name ?? ""
     }
-    */
-
+    
+    private func setupBindings() {
+        
+        // MARK: - Action
+        updateBtn.rx.tap
+            .throttle(RxTimeInterval.milliseconds(100), scheduler: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] in
+                guard let self = self else { return }
+                self.userProfileVM.updateUserWith(self.emailView.inputTF.text ?? "", name: self.nameView.inputTF.text ?? "")
+            }).disposed(by: disposeBag)
+        
+        deleteBtn.rx.tap
+            .throttle(RxTimeInterval.milliseconds(100), scheduler: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] in
+                guard let self = self else { return }
+                self.userProfileVM.deleteUserWith(User.currentUser())
+            }).disposed(by: disposeBag)
+    }
+    
+    // MARK: - Setup ResponseBinding
+    func setupResponseBinding() {
+        
+        userProfileVM.errorResponse
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { [weak self] (errorMessage) in
+                guard let self = self else { return }
+                switch errorMessage {
+                case .blankField:
+                    self.showError(label: self.messageLbl, error: errorMessage.errorValue)
+                case .invalidEmail:
+                    self.showError(label: self.messageLbl, error: errorMessage.errorValue)
+                case .unknown:
+                    break
+                }
+            }).disposed(by: disposeBag)
+        
+        userProfileVM.successResponse
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                self.showError(label: self.messageLbl, error: "The User information has been update")
+            }).disposed(by: disposeBag)
+        
+        userProfileVM.successResponseOnDelete
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                self.userCoordinator?.goToLogiPage()
+            }).disposed(by: disposeBag)
+    }
 }

@@ -8,11 +8,17 @@
 
 import UIKit
 
+protocol UserCoordinatorFinishDelegate: class {
+    func onFinishUser(coordinator: Coordinator)
+}
+
 class UserCoordinator: NSObject, Coordinator {
     
     var childCoordinators: [Coordinator]? = [Coordinator]()
     
     weak var parentCoordinator: MainCoordinator?
+    
+    weak var userFinishDelegate: UserCoordinatorFinishDelegate?
     
     var navigationCoordinator: UINavigationController
 
@@ -26,6 +32,11 @@ class UserCoordinator: NSObject, Coordinator {
         let userProfileVC: UserProfileVC = UserProfileVC.instantiate(storyboard: .userProfile)
         userProfileVC.userCoordinator = self
         navigationCoordinator.pushViewController(userProfileVC, animated: true)
+    }
+    
+    func goToLogiPage() {
+        userFinishDelegate?.onFinishUser(coordinator: self)
+        parentCoordinator?.toLoginScene()
     }
     
 //    func navigateToSignup() {

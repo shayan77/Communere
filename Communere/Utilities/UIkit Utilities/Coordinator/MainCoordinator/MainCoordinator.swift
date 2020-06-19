@@ -27,9 +27,7 @@ class MainCoordinator: NSObject {
         
         window.rootViewController = navigationCoordinator
         window.makeKeyAndVisible()
-        
-        print(UserDefaultsConfig.isUserLoggedIn)
-        
+                
         if UserDefaultsConfig.isUserLoggedIn {
             toHomeScene()
         } else {
@@ -48,6 +46,7 @@ class MainCoordinator: NSObject {
     func toHomeScene() {
         let child = UserCoordinator(navigationController: navigationCoordinator)
         child.parentCoordinator = self
+        child.userFinishDelegate = self
         childCoordinators?.append(child)
         child.start()
     }
@@ -55,6 +54,13 @@ class MainCoordinator: NSObject {
 
 extension MainCoordinator: LoginCoordinatorFinishDelegate {
     func onFinish(coordinator: Coordinator) {
+        navigationCoordinator.setViewControllers([], animated: false)
+        childCoordinators = childCoordinators?.filter {$0 !== coordinator}
+    }
+}
+
+extension MainCoordinator: UserCoordinatorFinishDelegate {
+    func onFinishUser(coordinator: Coordinator) {
         navigationCoordinator.setViewControllers([], animated: false)
         childCoordinators = childCoordinators?.filter {$0 !== coordinator}
     }

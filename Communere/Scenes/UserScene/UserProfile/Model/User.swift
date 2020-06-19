@@ -13,7 +13,7 @@ class User: NSObject, NSCoding {
     var id: Int? = 0
     var name: String? = ""
     var email: String? = ""
-
+    
     init(id: Int, name: String, email: String) {
         self.id = id
         self.name = name
@@ -30,6 +30,17 @@ class User: NSObject, NSCoding {
         coder.encode(id, forKey: "id")
         coder.encode(name, forKey: "name")
         coder.encode(email, forKey: "email")
+    }
+    
+    static func setCurrentUser(user: User) {
+        let encodedData = NSKeyedArchiver.archivedData(withRootObject: user)
+        UserDefaults.standard.set(encodedData, forKey: "user")
+    }
+    
+    static func currentUser() -> User {
+        let defaults = UserDefaults.standard
+        let data = defaults.object(forKey: "user") as! Data
+        return NSKeyedUnarchiver.unarchiveObject(with: data) as! User
     }
     
     static func storeArray(array: [User]) {
@@ -72,7 +83,9 @@ class User: NSObject, NSCoding {
     }
     
     static func checkIsUserExist(email: String) -> Bool {
-        if User.users().contains(where: { $0.email == email }) {
+        if users().contains(where: { $0.email == email }) {
+            let index = users().firstIndex(where: {$0.email == email})
+            setCurrentUser(user: users()[index!])
             return true
         } else {
             return false

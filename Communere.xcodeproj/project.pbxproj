@@ -33,6 +33,7 @@
 		838DB307249B7D63008EAA64 /* UserCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB306249B7D63008EAA64 /* UserCoordinator.swift */; };
 		838DB30C249B7ECF008EAA64 /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 838DB30B249B7ECF008EAA64 /* UserProfile.storyboard */; };
 		838DB30E249B7EDB008EAA64 /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DB30D249B7EDB008EAA64 /* UserProfileVC.swift */; };
+		83C10120249CEAB500273674 /* UserProfileVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C1011F249CEAB500273674 /* UserProfileVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		838DB306249B7D63008EAA64 /* UserCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCoordinator.swift; sourceTree = "<group>"; };
 		838DB30B249B7ECF008EAA64 /* UserProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserProfile.storyboard; sourceTree = "<group>"; };
 		838DB30D249B7EDB008EAA64 /* UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
+		83C1011F249CEAB500273674 /* UserProfileVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVM.swift; sourceTree = "<group>"; };
 		BA9DC2DA52D3C1663C1D26CB /* Pods_Communere.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Communere.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -359,6 +361,7 @@
 			children = (
 				838DB303249B7D18008EAA64 /* Model */,
 				838DB30A249B7EC1008EAA64 /* View */,
+				83C10121249CEAB900273674 /* ViewModel */,
 			);
 			path = UserProfile;
 			sourceTree = "<group>";
@@ -377,6 +380,14 @@
 				838DB30B249B7ECF008EAA64 /* UserProfile.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		83C10121249CEAB900273674 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				83C1011F249CEAB500273674 /* UserProfileVM.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		EF5A4F7C232A4CE844570B64 /* Pods */ = {
@@ -507,6 +518,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				838DB2F2249B5C42008EAA64 /* LoginVM.swift in Sources */,
+				83C10120249CEAB500273674 /* UserProfileVM.swift in Sources */,
 				838DB2ED249B4B6B008EAA64 /* InputType.swift in Sources */,
 				838DB2FC249B622E008EAA64 /* SignupVM.swift in Sources */,
 				838DB307249B7D63008EAA64 /* UserCoordinator.swift in Sources */,
